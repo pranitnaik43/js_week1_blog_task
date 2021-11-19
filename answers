@@ -1,0 +1,24 @@
+
+1.Diff between HTTP1 and HTTP2
+->Compared to HTTP/1, HTTP/2 has a low web page load latency because it used techniques such as compression, multiplexing, and prioritization
+->HTTP/1.1 keeps all requests and responses in plain text format, whereas HTTP/2 uses the binary framing layer to encapsulate all messages in binary format. The conversion of messages into binary allows HTTP/2 to try new approaches to data delivery not available in HTTP/1.1
+->HTTP/1 transfers requests and responses in plain-text messages, whereas HTTP/2 encodes these into binary, allowing for significantly different delivery model possibilities
+->HTTP/2 uses Stream prioritization which not only solves the issue of requests competing for the same resource, but also allows developers to customize the relative weight of requests to better optimize application performance.
+->In HTTP/1, the header component of a message is always sent as plain text. Although each header is quite small, the load of this uncompressed data increases on the connection as more requests are made. HTTP/2 splits headers from their data into a header frame and a data frame and then compresses the header frame.
+
+3. Diff between browser js and Node js
+->The browser js is mainly used for client-side applications like validations on a web page or dynamic page display whereas node js is used for server-side applications.
+->In case of normal js, it can run only on a browser, while in the case of Node.js, javascript code can run in any environment (having node).
+->Node.js can read and write directly to the file system
+->Browser js has objects like window, location, document which are not available in node.js. Node has objects like global, module and exports which is not available in browser js
+->js runs on any engine like Spider monkey (Firefox), JavaScript Core (Safari), V8 (Google Chrome) while Node.js runs on a V8 engine
+->In Node.js everything is a module while using modules is not mandatory for browser javascript.
+
+4. What happens when you type a URL in the address bar of a browser
+->When we type a URL in the browser, the request first goes to a DNS server from where the ip address of the server is fetched. 
+->On getting the IP address, a TCP connection is established with the server using a three way handshake
+->Once the connection is set up, an HTTP request is sent to the server over this connection. 
+->The server then sends a response which contains the required HTML, CSS and JS files. Other files like images, texts, etc which are linked to the HTML file are also sent eventually over the network.
+->In the browser, the HTML parser, CSS parser parses the HTML and CSS correspondingly. The JS engine executes the JS file.
+->A DOM tree is created for all the elements. The styles and events are applied to each element 
+->Then, the page is rendered on the browser.
